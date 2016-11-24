@@ -9,6 +9,7 @@ func contentTypeForUTI(_ UTI: String) -> String {
   return "application/octet-stream"
 }
 
+@available(iOS 9.0, *)
 class AssetDataSource: ChunkDataSource {
 
   enum Error: Swift.Error {

@@ -1,6 +1,7 @@
 import Photos
 import MobileCoreServices
 
+@available(iOS 9.0, *)
 func primaryAssetResource(_ resources: [PHAssetResource]) -> PHAssetResource? {
   let index = resources.index { resource -> Bool in
     let primaryType = resource.type == .video || resource.type == .photo || resource.type == .audio
@@ -10,6 +11,7 @@ func primaryAssetResource(_ resources: [PHAssetResource]) -> PHAssetResource? {
   return resources[assetIndex]
 }
 
+@available(iOS 9.0, *)
 public struct MultipartAssetField: MultipartField {
 
   public let asset: PHAsset

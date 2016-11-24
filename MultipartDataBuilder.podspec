@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
     :tag => "v4.0.0"
   }
   spec.platforms = {
-    :ios => "9.0"
+    :ios => "8.0"
   }
   spec.ios.frameworks = "MobileCoreServices"
   spec.dependencies = {
