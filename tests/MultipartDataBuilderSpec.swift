@@ -19,7 +19,7 @@ class MultipartDataBuilderSpec: QuickSpec {
         "Walter White\r\n" +
       "--\(builder.boundary)--\r\n"
 
-      expect(builder.build()).to(equal(wanted.dataUsingEncoding(NSUTF8StringEncoding)!))
+      expect(builder.build()).to(equal(wanted.dataUsingEncoding(String.Encoding.utf8)!))
     }
 
     it("serializes multiple form fields") {
@@ -34,7 +34,7 @@ class MultipartDataBuilderSpec: QuickSpec {
         "kill\r\n" +
       "--\(builder.boundary)--\r\n"
 
-      expect(builder.build()).to(equal(wanted.dataUsingEncoding(NSUTF8StringEncoding)!))
+      expect(builder.build()).to(equal(wanted.dataUsingEncoding(String.Encoding.utf8)!))
 
     }
 
